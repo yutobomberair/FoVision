@@ -1,0 +1,307 @@
+{
+  "source": "simulation",
+  "model": "kannala_brandt_equidistant_atan2",
+  "level": "points_only",
+  "results": [
+    {
+      "label": "ベースライン(ボード 25 ビュー)",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.36478241143372897,
+        "field_max_px_60_90deg": 0.4008459738592419,
+        "field_max_px_90_101deg": 0.50168949260004,
+        "field_max_px": 0.504820097560968,
+        "d_fx": 0.1718131658378752,
+        "d_cx": 0.10738834074516035,
+        "d_cy": 0.12501376149401722,
+        "rms": 0.4141020557860717,
+        "time_s": 0.29820309998467565
+      },
+      "worst_field_max_px": 0.8141631962933981,
+      "sigma_px": 0.3,
+      "motion": null,
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 handheld",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.27777357854695384,
+        "field_max_px_60_90deg": 0.29161632458562736,
+        "field_max_px_90_101deg": 0.31658791650277673,
+        "field_max_px": 0.3214886061115,
+        "d_fx": 0.0969850184943084,
+        "d_cx": 0.037670961097944655,
+        "d_cy": 0.074130986776197,
+        "rms": 0.3991946017747995,
+        "time_s": 0.8094187999377027
+      },
+      "worst_field_max_px": 0.5796466061336046,
+      "sigma_px": 0.3,
+      "motion": "handheld",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 small_translation",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.30237463808845544,
+        "field_max_px_60_90deg": 0.37257921618771506,
+        "field_max_px_90_101deg": 0.3785366686881517,
+        "field_max_px": 0.38204405606076064,
+        "d_fx": 0.22330790062181904,
+        "d_cx": 0.08655070458308955,
+        "d_cy": 0.058688803864015426,
+        "rms": 0.4047819371655248,
+        "time_s": 1.3130658500595018
+      },
+      "worst_field_max_px": 2.3671794351161166,
+      "sigma_px": 0.3,
+      "motion": "small_translation",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 forward",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 3.963808270742919,
+        "field_max_px_60_90deg": 5.332742613797997,
+        "field_max_px_90_101deg": 5.361298991295085,
+        "field_max_px": 5.543119787424148,
+        "d_fx": 2.155943609191297,
+        "d_cx": 0.8037701308098235,
+        "d_cy": 0.8746756872754986,
+        "rms": 0.4014730833388713,
+        "time_s": 1.603839399991557
+      },
+      "worst_field_max_px": 7.365209851296615,
+      "sigma_px": 0.3,
+      "motion": "forward",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 forward_yaw",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.45163967692162466,
+        "field_max_px_60_90deg": 0.5405186048826922,
+        "field_max_px_90_101deg": 0.5466236579272608,
+        "field_max_px": 0.5663423778918706,
+        "d_fx": 0.40546359153347566,
+        "d_cx": 0.0664638620701794,
+        "d_cy": 0.06534831680608022,
+        "rms": 0.40187211298672176,
+        "time_s": 0.8932426499668509
+      },
+      "worst_field_max_px": 0.955415556261497,
+      "sigma_px": 0.3,
+      "motion": "forward_yaw",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "ベースライン(ボード 25 ビュー)",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 1.2090093354226616,
+        "field_max_px_60_90deg": 1.3281468528787612,
+        "field_max_px_90_101deg": 1.6679420070185802,
+        "field_max_px": 1.6799338633469452,
+        "d_fx": 0.5849395931688832,
+        "d_cx": 0.35766319280145353,
+        "d_cy": 0.41210025157761265,
+        "rms": 1.3803497041131463,
+        "time_s": 0.2569425000110641
+      },
+      "worst_field_max_px": 2.727530533268601,
+      "sigma_px": 1.0,
+      "motion": null,
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 handheld",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.9203530741377413,
+        "field_max_px_60_90deg": 0.9664314057271355,
+        "field_max_px_90_101deg": 1.0568065131229325,
+        "field_max_px": 1.0734622300272787,
+        "d_fx": 0.32483001769554676,
+        "d_cx": 0.1271989995942704,
+        "d_cy": 0.2469678005077185,
+        "rms": 1.3306433325688118,
+        "time_s": 0.8232741000247188
+      },
+      "worst_field_max_px": 1.9359006925085316,
+      "sigma_px": 1.0,
+      "motion": "handheld",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 small_translation",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.8835711913933575,
+        "field_max_px_60_90deg": 1.0919799751268062,
+        "field_max_px_90_101deg": 1.1863906118347103,
+        "field_max_px": 1.1904747585778597,
+        "d_fx": 0.9080528345911034,
+        "d_cx": 0.18718282764024252,
+        "d_cy": 0.18757092948612808,
+        "rms": 1.3561535758615582,
+        "time_s": 1.4814255500095896
+      },
+      "worst_field_max_px": 2.2988054824906694,
+      "sigma_px": 1.0,
+      "motion": "small_translation",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 forward",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 13.220675947723642,
+        "field_max_px_60_90deg": 17.81251094738896,
+        "field_max_px_90_101deg": 17.71301634579143,
+        "field_max_px": 18.449594700623425,
+        "d_fx": 7.2079893241947275,
+        "d_cx": 2.5487994134211363,
+        "d_cy": 3.0547925759432246,
+        "rms": 1.3381798009568389,
+        "time_s": 1.4286814500228502
+      },
+      "worst_field_max_px": 24.325784392911487,
+      "sigma_px": 1.0,
+      "motion": "forward",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 forward_yaw",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 1.4938388780832503,
+        "field_max_px_60_90deg": 1.7922152200921948,
+        "field_max_px_90_101deg": 1.8088799108721876,
+        "field_max_px": 1.875766404857324,
+        "d_fx": 1.3386903613266554,
+        "d_cx": 0.22377260393528786,
+        "d_cy": 0.2181065305487664,
+        "rms": 1.339591363361495,
+        "time_s": 0.9483532500453293
+      },
+      "worst_field_max_px": 3.118956716111929,
+      "sigma_px": 1.0,
+      "motion": "forward_yaw",
+      "n_frames": 20,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 8 フレーム 200 点",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 1.6988850969903733,
+        "field_max_px_60_90deg": 2.145655667468473,
+        "field_max_px_90_101deg": 2.1906427308709286,
+        "field_max_px": 2.195838928871275,
+        "d_fx": 0.7121298530549325,
+        "d_cx": 0.4419859342223731,
+        "d_cy": 0.6517622953691671,
+        "rms": 1.2290043303291907,
+        "time_s": 0.10647344996687025
+      },
+      "worst_field_max_px": 3.1096986502157056,
+      "sigma_px": 1.0,
+      "motion": "handheld",
+      "n_frames": 8,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 40 フレーム 200 点",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.49645534657108287,
+        "field_max_px_60_90deg": 0.5553905273261819,
+        "field_max_px_90_101deg": 0.5541766042501894,
+        "field_max_px": 0.5616687640905804,
+        "d_fx": 0.20262593553121633,
+        "d_cx": 0.2296812695537369,
+        "d_cy": 0.14968091314000276,
+        "rms": 1.365283002257479,
+        "time_s": 2.786513199971523
+      },
+      "worst_field_max_px": 1.0419981334630857,
+      "sigma_px": 1.0,
+      "motion": "handheld",
+      "n_frames": 40,
+      "n_points": 200
+    },
+    {
+      "label": "自己校正 20 フレーム 60 点",
+      "runs": 7,
+      "failures": 1,
+      "median": {
+        "field_max_px_0_60deg": 1.7513492966263882,
+        "field_max_px_60_90deg": 2.0116651558101255,
+        "field_max_px_90_101deg": 2.1772076713419164,
+        "field_max_px": 2.1772076713419164,
+        "d_fx": 0.7087314811612941,
+        "d_cx": 0.5343655780797008,
+        "d_cy": 1.0322922819073028,
+        "rms": 1.2832907554125683,
+        "time_s": 0.37405990005936474
+      },
+      "worst_field_max_px": 3.7566524925371145,
+      "sigma_px": 1.0,
+      "motion": "handheld",
+      "n_frames": 20,
+      "n_points": 60
+    },
+    {
+      "label": "自己校正 20 フレーム 500 点",
+      "runs": 8,
+      "failures": 0,
+      "median": {
+        "field_max_px_0_60deg": 0.7522705814970618,
+        "field_max_px_60_90deg": 0.8528794838106444,
+        "field_max_px_90_101deg": 0.8224496526715426,
+        "field_max_px": 0.8528794838106444,
+        "d_fx": 0.43051016227963146,
+        "d_cx": 0.28338241552245336,
+        "d_cy": 0.1573243430843263,
+        "rms": 1.3496140257989289,
+        "time_s": 1.6135508000152186
+      },
+      "worst_field_max_px": 1.5403557301689565,
+      "sigma_px": 1.0,
+      "motion": "handheld",
+      "n_frames": 20,
+      "n_points": 500
+    }
+  ],
+  "motions": {
+    "handheld": "手持ちで自由に動かす(並進 ±0.3 m、回転 ±40°)",
+    "small_translation": "ほぼその場で向きだけ変える(並進 ±0.03 m、回転 ±40°)",
+    "forward": "光軸方向にまっすぐ 1 m 進む(回転 ±2°)",
+    "forward_yaw": "まっすぐ 1 m 進みながら向きを振る(回転 ±25°)"
+  }
+}
