@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import glob
+import time
 from typing import Iterator
 
 import cv2
@@ -52,13 +53,18 @@ class CameraSource:
     未検証: 実機が手元に無いため動作確認していない。会社で確認する。
     """
 
-    def __init__(self, device: int | str = 0, n_frames: int = 30, api: int = cv2.CAP_ANY):
-        self.device, self.n_frames, self.api = device, n_frames, api
+    def __init__(self, device: int | str = 0, n_frames: int = 30, api: int = cv2.CAP_ANY,
+                 interval_s: float = 0.0):
+        self.device, self.n_frames, self.api, self.interval_s = device, n_frames, api, interval_s
 
     def __iter__(self) -> Iterator[Frame]:
         cap = cv2.VideoCapture(self.device, self.api)
         try:
             for i in range(self.n_frames):
+                # ボードを動かす時間を空ける。待つ間も読み捨てて、古いフレームが溜まらないようにする
+                t_end = time.monotonic() + (self.interval_s if i else 0.0)
+                while time.monotonic() < t_end:
+                    cap.grab()
                 ok, img = cap.read()
                 if not ok:
                     break

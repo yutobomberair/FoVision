@@ -25,6 +25,7 @@ class CalibResult:
     iterations: int
     elapsed_s: float
     n_points: int
+    views: list = None       # 推定に使えたビューの番号(入力リストの添字)
 
 
 def init_pose(intr, obj, img):
@@ -171,4 +172,22 @@ def calibrate(obj_points, img_points, width, height, f_init, fov_deg=202.0, n_k=
     view_rms = np.array([np.sqrt(err2[vid == j].mean()) for j in range(len(keep))])
     return CalibResult(FisheyeCamera.from_intr(width, height, intr, fov_deg),
                        poses[:, :3], poses[:, 3:], float(np.sqrt(err2.mean())), view_rms, std,
-                       it, time.perf_counter() - t0, len(obj))
+                       it, time.perf_counter() - t0, len(obj), keep)
+
+
+def calibrate_auto(obj_points, img_points, width, height, f_init=None, **kw):
+    """焦点距離の初期値が分からなくても使える版。候補を順に試し、再投影誤差が最小の結果を返す。
+
+    戻り値: (CalibResult, 採用した初期値)。f_init を与えた場合はそれだけを使う。
+    """
+    cands = [f_init] if f_init else [width * s for s in (0.20, 0.26, 0.33, 0.42, 0.54)]
+    results = []
+    for f in cands:
+        try:
+            results.append((calibrate(obj_points, img_points, width, height, f, **kw), f))
+        except (ValueError, np.linalg.LinAlgError):
+            pass
+    if not results:
+        raise ValueError("どの初期値でも推定できなかった")
+    most = max(len(r.views) for r, _ in results)
+    return min((x for x in results if len(x[0].views) >= 0.8 * most), key=lambda x: x[0].rms)
